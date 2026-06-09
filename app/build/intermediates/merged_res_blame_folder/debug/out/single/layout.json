@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.bolang.android.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.bolang.android.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/gli-budi-agf/.gradle/daemon/8.4/com.bolang.android.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "/home/gli-budi-agf/.gradle/daemon/8.4/com.bolang.android.app-main-36:/layout/activity_main.xml"
+    }
+]

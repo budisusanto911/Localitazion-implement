@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+id btnLangEn
+id btnLangId
+id btnLangJv
+id btnLoad
+id btnLogin
+id btnLoginPreview
+id btnLogout
+id btnTestConn
+id etEmail
+id etPassword
+id etServerUrl
+id layoutLogin
+id layoutProjects
+id progressBar
+id spinnerProjects
+id tilEmail
+id tilPassword
+id tvAppSubtitle
+id tvAppTitle
+id tvAuthTitle
+id tvDumpLabel
+id tvLoginTitle
+id tvNavHome
+id tvOutput
+id tvPreviewLabel
+id tvProjectSelectLabel
+id tvSubtitle
+layout activity_main
+string app_name
+style Theme.BoLangAndroid

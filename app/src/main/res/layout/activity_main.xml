@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f0f0f">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- app.title -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- app.subtitle -->
+        <TextView
+            android:id="@+id/tvAppSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:layout_marginBottom="28dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ===== LOGIN ===== -->
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1a1a1a"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <!-- login.title -->
+            <TextView
+                android:id="@+id/tvAuthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Server URL (developer config — tidak perlu terjemahan) -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Server URL"
+                android:layout_marginBottom="4dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etServerUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:text="http://192.168.2.11:3000/api"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Genymotion→10.0.3.2  |  AVD→10.0.2.2  |  Device→192.168.2.11"
+                android:textColor="#555555"
+                android:textSize="10sp"
+                android:layout_marginBottom="6dp" />
+
+            <!-- login.test_conn -->
+            <Button
+                android:id="@+id/btnTestConn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:backgroundTint="#1e3a2a"
+                android:textColor="#00e676"
+                android:layout_marginBottom="16dp" />
+
+            <!-- login.email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:text="demo@bolang.app"
+                    android:textColor="#ffffff" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- login.password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:text="demo1234"
+                    android:textColor="#ffffff" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- login.button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:backgroundTint="#4f8ef7" />
+        </LinearLayout>
+
+        <!-- ===== PROJECTS ===== -->
+        <LinearLayout
+            android:id="@+id/layoutProjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- project.select -->
+            <TextView
+                android:id="@+id/tvProjectSelectLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#aaaaaa"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <Spinner
+                android:id="@+id/spinnerProjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a1a1a"
+                android:layout_marginBottom="12dp" />
+
+            <!-- project.refresh -->
+            <Button
+                android:id="@+id/btnLoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:enabled="false"
+                android:backgroundTint="#2d2d2d"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnLangId"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="🇮🇩 id"
+                    android:backgroundTint="#2d2d2d"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btnLangEn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="🇺🇸 en"
+                    android:backgroundTint="#2d2d2d"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btnLangJv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="🌴 jv"
+                    android:backgroundTint="#2d2d2d" />
+            </LinearLayout>
+
+            <!-- nav.preview_label -->
+            <TextView
+                android:id="@+id/tvPreviewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4f8ef7"
+                android:textSize="11sp"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#111111"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- login.title preview -->
+                <TextView
+                    android:id="@+id/tvLoginTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- home.subtitle preview -->
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#aaaaaa"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- login.button preview -->
+                <Button
+                    android:id="@+id/btnLoginPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:backgroundTint="#4f8ef7" />
+
+                <!-- nav.home preview -->
+                <TextView
+                    android:id="@+id/tvNavHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#555555"
+                    android:textSize="12sp"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- nav.dump_label -->
+            <TextView
+                android:id="@+id/tvDumpLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#aaaaaa"
+                android:textSize="11sp"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="11sp"
+                android:textColor="#00e676"
+                android:background="#111111"
+                android:padding="14dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- nav.logout -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:backgroundTint="#2d2d2d" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

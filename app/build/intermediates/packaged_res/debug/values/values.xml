@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BoLang Demo</string>
+    <style name="Theme.BoLangAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4f8ef7</item>
+        <item name="colorPrimaryVariant">#2d5cbf</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="android:windowBackground">#0f0f0f</item>
+    </style>
+</resources>
